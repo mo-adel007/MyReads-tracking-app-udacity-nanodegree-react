@@ -8,9 +8,7 @@ import BookShelf from './BookShelf'
 class BookList extends React.Component {
   state = {};
 
-  //Filter the books depending on a shelf
   updateShelf = (bookId, event) => {
-    //get the book on shelf from app
     let currentBooks = this.props.currentBooks;
     const book = currentBooks.filter(book => book.id === bookId)[0];
     book.shelf = event.target.value;
@@ -28,7 +26,6 @@ class BookList extends React.Component {
           <h1>MyReads</h1>
         </div>
         <div className="list-books-content">
-        {/*Display the three different shelves in main pages with its current books*/}
           <BookShelf
             key="currently"
             books={this.props.currentBooks.filter(book => book.shelf === "currentlyReading")}
