@@ -13,7 +13,6 @@ class SearchBook extends React.Component {
     }
   }
 
-  //Update the shelf
   updateData = (books) => {
     const cBooks = books.map(book => {
       book.shelf = "none";
@@ -29,9 +28,7 @@ class SearchBook extends React.Component {
     })
   }
 
-  /* 
-  	Read the query when the user types on and display 20 books by calling search method on BookAPI.js
-  */
+ 
   updateQuery = (query) => {
     this.setState({ query: query })
     if (query) {
@@ -45,9 +42,7 @@ class SearchBook extends React.Component {
     {this.setState({books:[]})} //With any errors
   }
 
-  /* 
-  	Update the shelf when book shelf changer button is clicked and the shelf changed
-  */
+  
   updateBooks = (book, shelf)=> {
     let current = this.state.books;
     const bookToUpdate = current.filter(cBook => cBook.id === book.id)[0];
