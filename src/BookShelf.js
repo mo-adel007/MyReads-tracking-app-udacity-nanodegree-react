@@ -40,7 +40,7 @@ class BookShelf extends React.Component {
                 <div className="book-authors">
                   {book.authors &&
                     <div className="book-authors">
-                      {book.authors[0]}
+                      {book.authors}
                     </div>}
                 </div>
               </li>
